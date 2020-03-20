@@ -28,8 +28,6 @@ And made the following changes:
                (find-file "~/Dropbox/beancount/main.bean")))
   :mode
   ("\\.bean\\(?:count\\)?\\'" . beancount-mode)
-  :hook
-  ('beancount-mode . #'yas-minor-mode-on)
   :config
   (setq beancount-accounts-files
         (directory-files "~/Dropbox/beancount/accounts"
@@ -51,8 +49,6 @@ And made the following changes:
                (find-file "~/Dropbox/beancount/main.bean")))
   :mode
   ("\\.bean\\(?:count\\)?\\'" . beancount-mode)
-  :hook
-  ('beancount-mode . #'yas-minor-mode-on)
   :config
   (setq beancount-accounts-files
         (directory-files "~/Dropbox/beancount/accounts"
