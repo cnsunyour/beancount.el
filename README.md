@@ -5,7 +5,7 @@
 This package is forked from
 https://bitbucket.org/blais/beancount/src/default/editors/emacs/beancount.el .
 
-And made the following changes:
+And made the following change:
 
 - Read the account names from the specified accounts files and provide it to the
   autocomplete function.
@@ -17,7 +17,7 @@ And made the following changes:
 ```emacs-lisp
 ;; packages.el
 (package! beancount
-  :recipe (:host github :repo "cnsunyour/beancount"))
+  :recipe (:host github :repo "cnsunyour/beancount.el"))
 
 ;; config.el
 (use-package! beancount
@@ -42,7 +42,7 @@ And made the following changes:
   :straight (beancount
              :type git
              :host github
-             :repo "cnsunyour/beancount")
+             :repo "cnsunyour/beancount.el")
   :bind
   ("C-M-b" . (lambda ()
                (interactive)
