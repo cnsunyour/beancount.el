@@ -315,11 +315,11 @@ from the open directive for the relevant account."
 
   (setq-local tab-always-indent 'complete)
   (setq-local completion-ignore-case t)
-  
+
   (add-hook 'completion-at-point-functions #'beancount-completion-at-point nil t)
   (add-hook 'post-command-hook #'beancount-highlight-transaction-at-point nil t)
   (add-hook 'post-self-insert-hook #'beancount--electric-currency nil t)
-  
+
   (setq-local font-lock-defaults '(beancount-font-lock-keywords))
   (setq-local font-lock-syntax-table t)
 
@@ -392,8 +392,10 @@ With an argument move to the next non cleared transaction."
   "A list of the accounts available in this buffer.")
 (make-variable-buffer-local 'beancount-accounts)
 
-(defvar beancount-accounts-files nil
-  "A list of files to provide candidates for accounts completion.")
+(defcustom beancount-accounts-files nil
+  "A list of files to provide candidates for accounts completion."
+  :type 'list
+  :group 'beancount)
 
 (defun beancount-completion-at-point ()
   "Return the completion data relevant for the text at point."
