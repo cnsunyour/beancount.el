@@ -30,7 +30,7 @@ And made the following change:
   ("\\.bean\\(?:count\\)?\\'" . beancount-mode)
   :config
   (setq beancount-accounts-files
-        (directory-files "~/Dropbox/beancount/accounts"
+        (directory-files "~/Dropbox/beancount/accounts/"
                          'full
                          (rx ".bean" eos))))
 ```
@@ -51,7 +51,7 @@ And made the following change:
   ("\\.bean\\(?:count\\)?\\'" . beancount-mode)
   :config
   (setq beancount-accounts-files
-        (directory-files "~/Dropbox/beancount/accounts"
+        (directory-files "~/Dropbox/beancount/accounts/"
                          'full
                          (rx ".bean" eos))))
 ```
